@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="CSS/mystyle.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!-- logo is a link that will refresh the page-->
+                <a href="index.html"><img src="images/logo.png" alt="CLOTH logo" class="logo_img" /></a>
+
+                <!-- nav menu contains links and close icon -->
+                <div class="nav_links" id="nav_links">
+                    <ul>
+                        <li><a href="mens_section.html" class="nav_link" id="menSec">Men</a></li>
+                        <li>
+                            <a href="women_section.html" class="nav_link" id="womenSec">Women</a>
+                        </li>
+                        <li><a href="about.html" class="nav_link">About</a></li>
+                        <li><a href="contact.html" class="nav_link">Contact Us</a></li>
+                    </ul>
+
+                    <img src="Images/svj/x.svg" id="close_button" class="nav_button close_button" alt="x" />
+                </div>
+                <div class="nav_buttons">
+                    <a href="login.html" class="nav_button login_button">
+                        <img src="Images/svj/user-round.svg" class="nav_button login_button" alt="login" />
+                    </a>
+
+                    <svg class="nav_button toggle_button" id="toggle_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <p class="about-text" style="text-align: center; font-size: 30px; padding: 20px">
+                    At Cloth.com, we offer a wide range of high-quality clothing items for both buyers and sellers. Whether you're looking to buy
+                    trendy outfits or sell your own creations, Cloth.com provides a seamless platform for all your fashion needs.
+                </p>
+            </div>
+
+            <section class="banner_slideshow">
+                <div class="slide">
+                    <video autoplay muted loop src="videos/about-banner-video.mp4"></video>
+                    <a href="">Learn About Us</a>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <div class="footer-col">
+            <h4>Products</h4>
+            <ul>
+                <li><a href="mens_section.html">Men</a></li>
+                <li><a href="women_section.html">Women</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">Privacy Policy</a></li>
+                <li><a href="about.html">Delivery Information</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Service</h4>
+            <ul>
+                <li><a href="about.html">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="links">
+                <a href="example.com"><i class="fab fa-linkedin-in"></i></a>
+                <a href="example.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="example.com"><i class="fab fa-twitter"></i></a>
+                <a href="example.com"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shopping-cart.js"></script>
+    <script src="js/login.js"></script>
+</html>

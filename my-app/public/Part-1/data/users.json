@@ -1,0 +1,42 @@
+{
+	"customers": [
+		{
+			"customerId":1,
+			"username": "john",
+			"password": "john123",
+			"name": "John",
+			"surname": "Doe",
+			"shipping_address": "123 Glitter St",
+			"money_balance": 1000
+		},
+		{			
+			"customerId":2,
+			"username": "jane",
+			"password": "jane123",
+			"name": "Jane",
+			"surname": "Smith",
+			"shipping_address": "456 Sunshine Ave",
+			"money_balance": 1500
+		}
+	],
+	"sellers": [
+		{
+			"sellerId":1,
+			"username": "Magic Inc.",
+			"password": "abracadabra",
+			"company_name": "Magic Inc.",
+			"bank_account_balance": 0
+		},
+		{
+			"sellerId":2,
+			"username": "Fantasy Traders",
+			"password": "mythical321",
+			"company_name": "Fantasy Traders",
+			"bank_account_balance": 0
+		}
+	],
+	"admin": {
+		"username": "admin",
+		"password": "password"
+	}
+}

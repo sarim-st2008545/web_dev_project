@@ -1,0 +1,58 @@
+body {
+    display: grid;
+    grid-template: 1fr, auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    height: 100%;
+
+    header {
+        grid-area: header;
+    }
+
+    main {
+        grid-area: main;
+        min-height: 85vh;
+        margin: 0px 15%;
+
+        h1,
+        h2 {
+            margin-left: 10px;
+        }
+
+        .search-heading {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: 3rem;
+
+            .big-word {
+                font-size: 2em;
+            }
+        }
+
+        .search-query {
+            font-size: 50px;
+            text-align: center;
+            color: gray;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+.container .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto; /* Center the grid */
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .search-query {
+        display: block;
+    }
+}

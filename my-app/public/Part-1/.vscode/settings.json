@@ -1,0 +1,12 @@
+{
+<<<<<<< HEAD
+	"liveServer.settings.port": 5501,
+	"workbench.colorCustomizations": {
+		"editor.lineHighlightBackground": "#1073cf2d",
+		"editor.lineHighlightBorder": "#9fced11f"
+	}
+}
+=======
+    "liveServer.settings.port": 5502
+}
+>>>>>>> 99ceb55f0787d0773187e308114bb2db31386e74

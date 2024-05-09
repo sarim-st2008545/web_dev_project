@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.ever {
+  background: url(../Images/hoodies/men_shirt2.webp);
+  background-size: cover;
+}
+body {
+  margin: auto;
+  background-color: white;
+
+  /* navbar is designed for big screen first to make implementation of the collapse simpler */
+  header {
+    /* keep header fixed at top and fill the entire width */
+    position: sticky;
+    width: 100%;
+    max-height: 20vh;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    /* background-color of header matches logo and there is a box shadow */
+    /* background-color: rgb(242, 241, 238); */
+    background-color: white;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5); */
+
+    nav {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      padding-right: 1rem;
+
+      .logo_img {
+        /* margin: 2px; */
+        width: 100px;
+
+        height: 100px;
+        justify-self: stretch;
+        align-self: stretch;
+        margin-left: 10px;
+
+        transition: color 0.4s;
+      }
+
+      .logo_img:hover {
+        opacity: 80%;
+      }
+
+      .nav_links {
+        ul {
+          display: flex;
+          list-style: none;
+
+          gap: 3rem;
+
+          li {
+            /* justify-self: stretch; */
+
+            a {
+              text-decoration: none;
+              font-size: 20px;
+              color: black;
+            }
+
+            a:hover {
+              color: grey;
+
+              /* have common code for transition */
+              transition: color 0.4s;
+            }
+          }
+        }
+      }
+
+      /* style div with buttons such as search, div) */
+      .nav_buttons {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+      }
+
+      /* style all icons in the nav */
+      .nav_button {
+        cursor: pointer;
+        transition: fill 0.4s;
+        border: auto;
+
+        width: 30px;
+      }
+
+      .cart_button {
+        width: 36px;
+      }
+
+      .nav_button:hover {
+        fill: gray;
+      }
+    }
+  }
+}
+/* hide the close buttona and collapse toggle button */
+.toggle_button,
+.close_button {
+  display: none;
+}
+h1 {
+  font-size: xx-large;
+}
+h2 {
+  color: rgb(15, 47, 227);
+}
+.information {
+  padding-top: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 200px 300px;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "name nameArea"
+    "mobile mobileArea"
+    "order orderArea"
+    "email emailArea"
+    "text textArea"
+    "text button";
+
+  div {
+    padding: 2px;
+  }
+  .name {
+    grid-area: name;
+  }
+  .mobile {
+    grid-area: mobile;
+  }
+  .order {
+    grid-area: order;
+  }
+  .email {
+    grid-area: email;
+  }
+  .text {
+    grid-area: text;
+  }
+  .nameArea {
+    grid-area: nameArea;
+  }
+  .mobileArea {
+    grid-area: mobileArea;
+  }
+  .orderArea {
+    grid-area: orderArea;
+  }
+  .emailArea {
+    grid-area: emailArea;
+  }
+  .textArea {
+    grid-area: textArea;
+  }
+  .butt {
+    grid-area: button;
+  }
+  #name,
+  #order,
+  #email,
+  #mobile,
+  #button,
+  #text {
+    padding: 5px;
+    width: 100%;
+  }
+  label {
+    font-weight: bolder;
+  }
+
+  button {
+    /* background-color: rgb(61, 61, 62); */
+    /* background-image: url(../Images/hoodies/men_shirt2.webp); */
+    color: white;
+    border: none;
+    text-align: center;
+  }
+}
+.contact {
+  padding: 10px;
+  margin-left: 20px;
+}

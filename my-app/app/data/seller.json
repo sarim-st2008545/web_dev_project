@@ -1,0 +1,58 @@
+[
+    {
+        "sellerId": 1,
+        "username": "Magic Inc.",
+        "password": "abracadabra",
+        "company_name": "Magic Inc.",
+        "bank_account_balance": 10400
+    },
+    {
+        "sellerId": 2,
+        "username": "Fantasy Traders",
+        "password": "mythical321",
+        "company_name": "Fantasy Traders",
+        "bank_account_balance": 29443
+    },
+    {
+        "sellerId": 3,
+        "username": "Wonder Emporium",
+        "password": "mystery123",
+        "company_name": "Wonder Emporium",
+        "bank_account_balance": 333443
+    },
+    {
+        "sellerId": 4,
+        "username": "Enchanted Goods",
+        "password": "enchanted456",
+        "company_name": "Enchanted Goods",
+        "bank_account_balance": 343567
+    },
+    {
+        "sellerId": 5,
+        "username": "Mythical Merchants",
+        "password": "legendary789",
+        "company_name": "Mythical Merchants",
+        "bank_account_balance": 293099
+    },
+    {
+        "sellerId": 6,
+        "username": "Dreamland Traders",
+        "password": "dreamy987",
+        "company_name": "Dreamland Traders",
+        "bank_account_balance": 32222
+    },
+    {
+        "sellerId": 7,
+        "username": "Imaginary Imports",
+        "password": "imagination456",
+        "company_name": "Imaginary Imports",
+        "bank_account_balance": 23222
+    },
+    {
+        "sellerId": 8,
+        "username": "Fantastical Finds",
+        "password": "fantasy321",
+        "company_name": "Fantastical Finds",
+        "bank_account_balance": 90083
+    }
+]

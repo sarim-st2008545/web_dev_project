@@ -1,0 +1,55 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Seller {
+  sellerId Int [pk, increment]
+  username String [not null]
+  password String [not null]
+  company_name String [not null]
+  bank_account_balance Int [not null]
+  Item Item [not null]
+}
+
+Table Item {
+  id Int [pk, increment]
+  name String [not null]
+  type String [not null]
+  price Float [not null]
+  image String [not null]
+  material String [not null]
+  gender String [not null]
+  color String [not null]
+  description String [not null]
+  quantity Int [not null]
+  Seller Seller [not null]
+  sellerId Int [not null]
+  Purchase Purchase [not null]
+}
+
+Table Purchase {
+  purchaseId Int [pk, increment]
+  quantity Int [not null]
+  purchaseDate DateTime [default: `now()`, not null]
+  Item Item [not null]
+  itemId Int [not null]
+  Customer Customer [not null]
+  customerId Int [not null]
+}
+
+Table Customer {
+  customerId Int [pk, increment]
+  username String [not null]
+  password String [not null]
+  name String [not null]
+  surname String [not null]
+  shipping_address String [not null]
+  money_balance Int [not null]
+  Purchase Purchase [not null]
+}
+
+Ref: Item.sellerId > Seller.sellerId
+
+Ref: Purchase.itemId > Item.id
+
+Ref: Purchase.customerId > Customer.customerId

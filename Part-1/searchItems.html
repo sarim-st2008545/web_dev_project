@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CLOTH - Search Results</title>
+        <link rel="stylesheet" href="CSS/mystyle.css" />
+        <link rel="stylesheet" href="CSS/product-grid.css" />
+        <link rel="stylesheet" href="CSS/searchResultsStyles.css" />
+        <link rel="icon" type="image/x-icon" href="images/logo.ico" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!-- logo is a link that will refresh the page-->
+                <a href="index.html"><img src="images/logo.png" alt="CLOTH logo" class="logo_img" /></a>
+
+                <!-- nav menu contains links and close icon -->
+                <div class="nav_links" id="nav_links">
+                    <ul>
+                        <li><a href="mens_section.html" class="nav_link">Men</a></li>
+                        <li><a href="women_section.html" class="nav_link">Women</a></li>
+                        <li><a href="about.html" class="nav_link">About</a></li>
+                        <li><a href="contact.html" class="nav_link">Contact Us</a></li>
+                    </ul>
+
+                    <img src="Images/svj/x.svg" id="close_button" class="nav_button close_button" alt="x" />
+                </div>
+                <div class="nav_buttons">
+                    <img src="Images/svj/search.svg" class="nav_button search_button" alt="search" />
+
+                    <a href="" class="nav_button login_button">
+                        <img src="Images/svj/user-round.svg" class="nav_button login_button" alt="login" />
+                    </a>
+                    <div class="nav_button cart_button cart_logo" id="container_cart">
+                        <img src="Images/svj/shopping-cart.svg" class="nav_button" alt="cart" />
+                        <span>0</span>
+                    </div>
+
+                    <svg class="nav_button toggle_button" id="toggle_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="search_container search_hidden" id="search">
+                <form action="" class="search_form" id="search_form">
+                    <input type="search" placeholder="What are you looking for?" id="searchQuery" name="seachQuery" class="search__input" />
+                    <button class="submit-button" type="submit">Search</button>
+                </form>
+                <svg id="search_close_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                    />
+                </svg>
+            </div>
+
+            <h1 class="search-heading">
+                <span class="big-word">Search</span> Results
+                <span class="for"
+                    >for <i><span class="search-query">Blue Shirt</span></i></span
+                >
+            </h1>
+            <div class="content"><div class="product-grid"></div></div>
+            <div class="cartTab">
+                <h1>Shopping Cart</h1>
+                <div class="listCart">
+                    <!-- <div class="shop-cart-item">
+						<div class="image-shop-cart">
+							<img src="/Images/hoodies/Man-Pic.jpg" alt="" />
+						</div>
+						<div class="shop-cart-item-name">Name</div>
+						<div class="item-price">40$</div>
+						<div class="item-quantity">
+							<span class="minus"> < </span>
+							<span> 1 </span>
+							<span class="plus"> > </span>
+						</div>
+					</div> -->
+                </div>
+                <div class="shopping-cart-Btn">
+                    <button class="close-shopping-cart">Close</button>
+                    <button class="checkout-shopping-cart">Checkout</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="product-grid"></div>
+
+                <!--
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+          <div class="product-details">
+            <h2 class="product-name">Striped Hoodie</h2>
+            <p class="seller-name">Sold by: Magic Inc.</p>
+            <p class="price">$35.99</p>
+            <p class="description">
+              Stylish striped hoodie for men, perfect for casual wear.
+            </p>
+            <ul class="attributes">
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Type:</strong> Hoodie</li>
+              <li><strong>Color:</strong> Black/White</li>
+              <li>
+                <strong>Size:</strong>
+                <select class="size-dropdown">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large" selected>Large</option>
+                </select>
+              </li>
+              <li><strong>Material:</strong> Cotton</li>
+            </ul>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+      -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="mens_section.html">Men</a></li>
+                    <li><a href="women_section.html">Women</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
+                    <li><a href="about.html">Delivery Information</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="about.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="links">
+                    <a href="example.com"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="example.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="example.com"><i class="fab fa-twitter"></i></a>
+                    <a href="example.com"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/search.js"></script>
+        <script src="js/searchPage.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/shopping-cart.js"></script>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>CLOTH - Seller Dashboard</title>
+        <link rel="stylesheet" href="CSS/product-grid.css" />
+        <link rel="stylesheet" href="CSS/mystyle.css" />
+        <link rel="stylesheet" href="CSS/product-grid-featured-products.css" />
+        <link rel="stylesheet" href="CSS/seller_dashboard.css" />
+
+        <link rel="icon" type="image/x-icon" href="images/logo.ico" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- logo is a link that will refresh the page-->
+                <a href="index.html"><img src="images/logo.png" alt="CLOTH logo" class="logo_img" /></a>
+
+                <!-- nav menu contains links and close icon -->
+                <div class="nav_links" id="nav_links">
+                    <ul>
+                        <li><a href="mens_section.html" class="nav_link">Men</a></li>
+                        <li><a href="women_section.html" class="nav_link">Women</a></li>
+                        <li><a href="about.html" class="nav_link">About</a></li>
+                        <li><a href="contact.html" class="nav_link">Contact Us</a></li>
+                    </ul>
+
+                    <img src="Images/svj/x.svg" id="close_button" class="nav_button close_button" alt="x" />
+                </div>
+                <div class="nav_buttons">
+                    <img src="Images/svj/search.svg" class="nav_button search_button" alt="search" />
+
+                    <a href="login.html" class="nav_button login_button">
+                        <img src="Images/svj/user-round.svg" class="nav_button login_button" alt="login" />
+                    </a>
+                    <div class="nav_button cart_button cart_logo" id="container_cart">
+                        <img src="Images/svj/shopping-cart.svg" class="nav_button" alt="cart" />
+                        <span>0</span>
+                    </div>
+
+                    <svg class="nav_button toggle_button" id="toggle_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                        />
+                    </svg>
+                </div>
+            </nav>
+        </header>
+
+        <div class="search_container search_hidden" id="search">
+            <form action="" class="search_form">
+                <input type="search" placeholder="What are you looking for?" class="search__input" required />
+                <button class="submit-button" type="submit">Search</button>
+            </form>
+            <svg id="search_close_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+            </svg>
+        </div>
+
+        <main>
+            <section class="seller-banner">
+                <h1 class="seller_Name"></h1>
+                <a class="log-out-button">Log Out</a>
+            </section>
+
+            <section class="seller-menu">
+                <div class="menu-item Sell-Product"><h1>SELL NEW PRODUCT</h1></div>
+                <div class="menu-item Sale-History"><h1>SALE HISTORY</h1></div>
+                <div class="menu-item Current-Catalogue"><h1>CURRENT CATALOGUE</h1></div>
+            </section>
+
+            <section class="seller-Pages">
+                <div class="please Sell-Product-Page">
+                    <form action="" id="productForm">
+                        <div class="Sell-Product-Page">
+                            <div class="header"><h1>Add New Product To The Stock</h1></div>
+
+                            <div class="name"><label for="name">Name:</label></div>
+                            <div class="nameArea"><input type="text" id="name" name="name" /></div>
+
+                            <!-- <div class="sellerName"><label for="sellerName">Seller Name:</label></div>
+                            <div class="sellerNameArea"><input type="text" id="sellerName" name="sellerName"></div> -->
+
+                            <div class="gender"><label for="gender">Gender:</label></div>
+                            <div class="genderArea">
+                                <select id="gender" name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="type"><label for="type">Type:</label></div>
+                            <div class="typeArea">
+                                <select id="type" name="type">
+                                    <option value="Hoodie">Hoodie</option>
+                                    <option value="Pant">Pant</option>
+                                    <option value="Sweatshirt">Sweatshirt</option>
+                                    <option value="Trouser">Trouser</option>
+                                    <option value="Shirt">Shirt</option>
+                                    <option value="Accessories">Accessories</option>
+                                </select>
+                            </div>
+                            <div class="price1"><label for="price">Price:</label></div>
+                            <div class="priceArea1">
+                                <input type="number" id="price" name="price" />
+                            </div>
+
+                            <div class="image"><label for="image">Image:</label></div>
+                            <div class="imageArea">
+                                <input type="file" id="image" name="image" />
+                            </div>
+
+                            <div class="color"><label for="color">Color:</label></div>
+                            <div class="colorArea">
+                                <input type="text" id="color" name="color" />
+                            </div>
+
+                            <div class="size"><label for="size">Size:</label></div>
+                            <div class="sizeArea">
+                                <select id="size" name="size">
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                            </div>
+
+                            <div class="material"><label for="material">Material:</label></div>
+                            <div class="materialArea">
+                                <input type="text" id="material" name="material" />
+                            </div>
+
+                            <div class="stock"><label for="stock">Quantity:</label></div>
+                            <div class="stockArea">
+                                <input type="number" id="stock" name="stock" />
+                            </div>
+
+                            <div class="description1"><label for="description">Description:</label></div>
+                            <div class="descriptionArea1">
+                                <input type="text" id="description" name="description" />
+                            </div>
+
+                            <div class="form-btns all">
+                                <input type="submit" value="Submit" id="submit" class="submit" />
+                                <input type="reset" value="Cancel" id="cancel" class="cancel" />
+                            </div>
+
+                            <!-- <div class="purchaseHeader"><h2>Purchase History</h2></div>
+                        
+                            <div class="purchase-history">
+                                <div class="customer"><label for="customer">Customer Name:</label></div>
+                                <div class="customerArea"><input type="text" id="customer" name="customer"></div>
+                        
+                                <div class="quantity"><label for="quantity">Quantity:</label></div>
+                                <div class="quantityArea"><input type="number" id="quantity" name="quantity"></div>
+                            </div>
+                         -->
+                        </div>
+                    </form>
+                </div>
+
+                <div class="seller-Page Sale-History-Page">
+                    <h1>Sale History of <span class="seller_Name">products</span></h1>
+                    <div class="product-grid-sale-history">
+                        <div class="sale-history-product-card">
+                            <img src="Images/hoodies/men_shirt2.webp" alt="Striped Hoodie" />
+                            <div class="product-details">
+                                <h2 class="product-name">Striped Hoodie</h2>
+                                <p class="price-text">Sold at <span class="price">$35.99</span></p>
+                                <p class="stock-remaining-text">Stock Remaining : <span class="quantity">50</span></p>
+                                <p class="stock-sold-text">Items Sold : <span class="quantity-sold">4</span></p>
+                                <h2 class="customer-list-heading">Customer List</h2>
+                                <ul class="customer-list">
+                                    <li class="customer-name">john</li>
+                                    <li class="customer-name">jane</li>
+                                    <li class="customer-name">ahmed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="seller-Page Current-Catalogue-Page">
+                    <h1>Current Products being sold by <span class="seller_Name"></span></h1>
+                    <div class="product-grid"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+        <!-- javscript link at the end so that HTML content loads first -->
+        <script src="js/main.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/seller-dashboard.js"></script>
+    </body>
+</html>

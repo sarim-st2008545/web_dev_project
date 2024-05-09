@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+body {
+    margin: auto;
+    background-color: white;
+
+    /* navbar is designed for big screen first to make implementation of the collapse simpler */
+    header {
+        /* keep header fixed at top and fill the entire width */
+        position: sticky;
+        width: 100%;
+        /* max-height: 20vh; */
+
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 998;
+
+        /* background-color of header matches logo and there is a box shadow */
+        /* background-color: rgb(242, 241, 238); */
+        background-color: white;
+        /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5); */
+
+        nav {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding-right: 1rem;
+
+            .logo_img {
+                /* margin: 2px; */
+                width: 100px;
+
+                height: 100px;
+                justify-self: stretch;
+                align-self: stretch;
+                margin-left: 10px;
+
+                transition: color 0.4s;
+            }
+
+            .logo_img:hover {
+                opacity: 80%;
+            }
+
+            .nav_links {
+                ul {
+                    display: flex;
+                    list-style: none;
+
+                    gap: 3rem;
+
+                    li {
+                        /* justify-self: stretch; */
+
+                        a {
+                            text-decoration: none;
+                            font-size: 20px;
+                            color: black;
+                        }
+
+                        a:hover {
+                            color: grey;
+
+                            /* have common code for transition */
+                            transition: color 0.4s;
+                        }
+                    }
+                }
+            }
+
+            /* style div with buttons such as search, div) */
+            .nav_buttons {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+            }
+
+            /* style all icons in the nav */
+            .nav_button {
+                cursor: pointer;
+                transition: fill 0.4s;
+                border: auto;
+
+                width: 30px;
+            }
+
+            .cart_button {
+                width: 36px;
+            }
+            #container_cart {
+                position: relative;
+            }
+
+            #container_cart span {
+                display: flex;
+                height: 20px;
+                width: 20px;
+                background-color: #333;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 45%;
+                right: 0px;
+            }
+            .nav_button:hover {
+                fill: gray;
+            }
+        }
+    }
+
+    .cartTab {
+        width: 100%;
+        background-color: #333;
+        opacity: 0.99;
+        color: white;
+        position: fixed;
+        inset: 0 -100% 0 auto;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        transition: 0.5s;
+        z-index: 999;
+        h1 {
+            padding: 20px;
+            margin: auto;
+            font-weight: 300;
+        }
+        .shopping-cart-Btn {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        button {
+            background-color: #8f8f8f;
+            border: none;
+            cursor: pointer;
+        }
+        .close-shopping-cart {
+            background-color: #f8f8f8;
+        }
+        .listCart {
+            margin-top: 15px;
+            overflow: auto;
+            .shop-cart-item {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 70px 150px 150px 1fr;
+                gap: 10px;
+                text-align: center;
+                align-items: center;
+                .item-quantity {
+                    span {
+                        padding-top: 3px;
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        background-color: #8f8f8a;
+                        color: #333;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                    span:nth-child(2) {
+                        background-color: transparent;
+                        color: #fff;
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .listCart::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+
+    grid-template-areas: "aside content";
+    grid-gap: 1.5rem;
+
+    .sideNav {
+        grid-area: aside;
+        margin: 10px;
+    }
+    .product-grid {
+        grid-area: content;
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: #111827;
+    padding: 60px 10%;
+}
+ul {
+    list-style: none;
+}
+.footer-col {
+    width: 25%;
+}
+.footer-col h4 {
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #9ca3af;
+    text-transform: capitalize;
+}
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #0369a1;
+    height: 2px;
+    width: 55px;
+}
+ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
+ul li a {
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #4b5563;
+    text-decoration: none;
+    transition: 0.4s;
+}
+ul li a:hover {
+    color: #f4f4f5;
+    padding-left: 2px;
+}
+
+.links a {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    background-color: #374151;
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.links a:hover {
+    color: #4d4f55;
+    background-color: #06b6d4;
+    transition-duration: 0.5s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 740px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .footer-col h4::before {
+        all: unset;
+    }
+}
+@media screen and (max-width: 555px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/* layout for bigger screen */
+@media screen and (min-width: 768px) {
+    /* hide the close button and collapse toggle button */
+    .toggle_button,
+    .close_button {
+        display: none;
+    }
+}

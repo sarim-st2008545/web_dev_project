@@ -1,0 +1,182 @@
+[
+    {
+        "customerId": 1,
+        "username": "john",
+        "password": "john123",
+        "name": "John",
+        "surname": "Doe",
+        "shipping_address": "123 Glitter St",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 2,
+        "username": "jane",
+        "password": "jane123",
+        "name": "Jane",
+        "surname": "Smith",
+        "shipping_address": "456 Sunshine Ave",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 3,
+        "username": "alice",
+        "password": "alice123",
+        "name": "Alice",
+        "surname": "Johnson",
+        "shipping_address": "789 Rainbow Rd",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 4,
+        "username": "bob",
+        "password": "bob123",
+        "name": "Bob",
+        "surname": "Brown",
+        "shipping_address": "1010 Cloud Blvd",
+        "money_balance": 2000
+    },
+    {
+        "customerId": 5,
+        "username": "carol",
+        "password": "carol123",
+        "name": "Carol",
+        "surname": "Williams",
+        "shipping_address": "1111 Star St",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 6,
+        "username": "david",
+        "password": "david123",
+        "name": "David",
+        "surname": "Davis",
+        "shipping_address": "1212 Moon Ave",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 7,
+        "username": "emma",
+        "password": "emma123",
+        "name": "Emma",
+        "surname": "Anderson",
+        "shipping_address": "1313 Sun St",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 8,
+        "username": "frank",
+        "password": "frank123",
+        "name": "Frank",
+        "surname": "White",
+        "shipping_address": "1414 Cloud Rd",
+        "money_balance": 1900
+    },
+    {
+        "customerId": 9,
+        "username": "grace",
+        "password": "grace123",
+        "name": "Grace",
+        "surname": "Martinez",
+        "shipping_address": "1515 Rainbow Blvd",
+        "money_balance": 2200
+    },
+    {
+        "customerId": 10,
+        "username": "lia",
+        "password": "lia123",
+        "name": "Lia",
+        "surname": "Thomas",
+        "shipping_address": "1616 Star Rd",
+        "money_balance": 3500
+    },
+    {
+        "customerId": 11,
+        "username": "ryan",
+        "password": "ryan123",
+        "name": "Ryan",
+        "surname": "Gosling",
+        "shipping_address": "1616 Star Rd",
+        "money_balance": 1200
+    },
+    {
+        "customerId": 12,
+        "username": "denzel",
+        "password": "denzel123",
+        "name": "Denzel",
+        "surname": "Washington",
+        "shipping_address": "72 Walnut Avenue",
+        "money_balance": 1300
+    },
+    {
+        "customerId": 13,
+        "username": "leo",
+        "password": "leo123",
+        "name": "Leo",
+        "surname": "Mess",
+        "shipping_address": "1000 Spruce Street",
+        "money_balance": 3800
+    },
+    {
+        "customerId": 14,
+        "username": "cristiano",
+        "password": "cristiano123",
+        "name": "Cristiano",
+        "surname": "Ronaldo",
+        "shipping_address": "123 Main St",
+        "money_balance": 3000
+    },
+    {
+        "customerId": 15,
+        "username": "xabi",
+        "password": "xabi23",
+        "name": "Xabi",
+        "surname": "Alonso",
+        "shipping_address": "1818 Willow Ave",
+        "money_balance": 3500
+    },
+    {
+        "customerId": 16,
+        "username": "lampard",
+        "password": "lampard123",
+        "name": "Frank",
+        "surname": "Lampard",
+        "shipping_address": "188 Street Ave",
+        "money_balance": 5000
+    },
+    {
+        "customerId": 17,
+        "username": "emmy",
+        "password": "watson123",
+        "name": "Emma",
+        "surname": "Watson",
+        "shipping_address": "188 Street Ave",
+        "money_balance": 3200
+    },
+    {
+        "customerId": 18,
+        "username": "aisha",
+        "password": "aisha123",
+        "name": "Aisha",
+        "surname": "Ali",
+        "shipping_address": "188 Street Ave",
+        "money_balance": 1500
+    },
+    {
+        "customerId": 19,
+        "username": "laiba",
+        "password": "laiba123",
+        "name": "Laiba",
+        "surname": "Ahmed",
+        "shipping_address": "188 Street Ave",
+        "money_balance": 4900
+    },
+    {
+        "customerId": 20,
+        "username": "zohra",
+        "password": "zohra123",
+        "name": "Zohra",
+        "surname": "Khan",
+        "shipping_address": "188 Street Ave",
+        "money_balance": 4500
+    }
+]
